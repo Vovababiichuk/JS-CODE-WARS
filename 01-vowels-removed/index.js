@@ -57,4 +57,6 @@ console.log(disemvowel('It is a long established fact that a reader will be dist
 console.log(disemvowel('AEIOUaeiou'));
 console.log(disemvowel('1234567890'));
 console.log(disemvowel(''));
-console.log(disemvowel('BCDFG'));
+console.log(disemvowel('BCDFG'));function disemvowel(str) {
+  return str.replace(/[aeiou]/gi, '');
+}
