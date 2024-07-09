@@ -16,13 +16,13 @@ Note you should only return a number, the count of divisors. The numbers between
 // v1
 
 // function getDivisorsCnt(n){
-// 	const arr = [];
+// 	let count = 0;
 // 	for (let i = 1; i <= n; i += 1) {
 // 		if (n % i === 0) {
-// 			arr.push(i)
+// 			count += 1;
 // 		}
 // 	}
-// 	return arr.join(', ')
+// 	return count
 // }
 
 // console.log(getDivisorsCnt(4));
@@ -37,9 +37,24 @@ function getDivisorsCnt(n) {
 		.fill(0)
 		.map((_, i) => i + 1)
 		.filter(num => n % num === 0)
+		.length
 }
 
+console.log(getDivisorsCnt(1));
 console.log(getDivisorsCnt(4));
 console.log(getDivisorsCnt(5));
 console.log(getDivisorsCnt(12));
 console.log(getDivisorsCnt(30));
+
+//! =========Best Practice================
+// function getDivisorsCnt(n){
+// 	var num=0;
+// 	if(n==1) return 1;
+// 	if(n%Math.sqrt(n)==0) num++;
+// 	for(var i=1;i<Math.sqrt(n);i++){
+// 			if(n%i==0){
+// 					num+=2;
+// 			}
+// 	}
+// 	return num;
+// }
