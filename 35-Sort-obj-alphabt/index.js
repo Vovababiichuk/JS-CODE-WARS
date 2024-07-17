@@ -1,20 +1,3 @@
-// TODO -  CHECK BY NUMBER
-//? return [...pin].every(char => char >= '0' && char <= '9')
-
-//TODO - CREATE A NEW ARRAY with numbers from 1 to n
-console.log(new Array(n).fill(0).map((_, i) => i + 1))
-
-//TODO - 10% discount
-
-let result = 120 * 0.9;
-console.log(result); // 108
-
-//TODO - vowels
-
-// 'aeiouAEIOU'
-
-//TODO - sort by title alphabetically
-
 let books = [
 	{ title: 'JavaScript: The Good Parts', author: 'Douglas Crockford' },
 	{ title: 'Clean Code', author: 'Robert C. Martin' },
@@ -27,4 +10,3 @@ books.sort((a, b) => a.title < b.title ? -1 : 1);
 
 // Output the sorted books
 console.log(books);
-
