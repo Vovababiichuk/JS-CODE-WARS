@@ -13,6 +13,12 @@ console.log(result); // 108
 
 // 'aeiouAEIOU'
 
+//TODO - slice(-4)
+
+const str = "Skippy";
+
+console.log(str.slice(-4)); // 'ippy'
+
 //TODO - sort by title alphabetically
 
 let books = [
