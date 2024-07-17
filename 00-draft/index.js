@@ -8,3 +8,7 @@ console.log(new Array(n).fill(0).map((_, i) => i + 1))
 
 let result = 120 * 0.9;
 console.log(result); // 108
+
+//TODO - vowels
+
+// 'aeiouAEIOU'
