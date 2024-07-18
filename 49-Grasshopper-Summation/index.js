@@ -20,15 +20,18 @@
 
 
 // v2
-const summation = function (num) {
-	let sum = 0;
-	for (let i = 1; i <= num; i += 1) {
-		sum += i;
-	}
+// const summation = function (num) {
+// 	let sum = 0;
+// 	for (let i = 1; i <= num; i += 1) {
+// 		sum += i;
+// 	}
 
-	return sum;
-}
+// 	return sum;
+// }
 
-console.log(summation(2))
-console.log(summation(8))
+// console.log(summation(2))
+// console.log(summation(8))
+
+// v3
+const summation = n => n * (n + 1) / 2;
 
