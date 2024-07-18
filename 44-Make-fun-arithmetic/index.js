@@ -58,10 +58,10 @@
 // v3
 
 const arithmetic = (a, b, operator) => ({
-  'add'     : a + b,
+  'add': a + b,
   'subtract': a - b,
   'multiply': a * b,
-  'divide'  : a / b
-}[operator]);
+  'divide': a / b
+}[operator])
 
-console.log(arithmetic(5, 2, 'multiply'));
+console.log(arithmetic(5, 2, 'add'));
