@@ -17,40 +17,51 @@
 
 // v1
 
-function arithmetic(a, b, operator){
-  let res = 0;
-  switch (operator) {
-    case 'add':
-      res = a + b;
-      break;
-    case 'subtract':
-      res = a - b;
-      break;
-    case 'multiply':
-      res = a * b;
-      break;
-    case 'divide':
-      res = a / b;
-      break;
-      default:
-        break;
-  }
-  return res;
-}
+// function arithmetic(a, b, operator){
+//   let res = 0;
+//   switch (operator) {
+//     case 'add':
+//       res = a + b;
+//       break;
+//     case 'subtract':
+//       res = a - b;
+//       break;
+//     case 'multiply':
+//       res = a * b;
+//       break;
+//     case 'divide':
+//       res = a / b;
+//       break;
+//       default:
+//         break;
+//   }
+//   return res;
+// }
 
-console.log(arithmetic(5, 2, 'divide'));
+// console.log(arithmetic(5, 2, 'divide'));
 
 // v2
 
-function arithmetic(a, b, operator){
-  const operations = {
-    add: (a, b) => a + b,
-    subtract: (a, b) => a - b,
-    multiply: (a, b) => a * b,
-    divide: (a, b) => a / b
-  };
+// function arithmetic(a, b, operator){
+//   const operations = {
+//     add: (a, b) => a + b,
+//     subtract: (a, b) => a - b,
+//     multiply: (a, b) => a * b,
+//     divide: (a, b) => a / b
+//   };
 
-  return operations[operator](a, b);
-}
+//   return operations[operator](a, b);
+// }
 
-console.log(arithmetic(5, 2, 'add'));
+// console.log(arithmetic(5, 2, 'add'));
+
+// v3
+
+const arithmetic = (a, b, operator) => ({
+  'add'     : a + b,
+  'subtract': a - b,
+  'multiply': a * b,
+  'divide'  : a / b
+}[operator]);
+
+console.log(arithmetic(5, 2, 'multiply'));
