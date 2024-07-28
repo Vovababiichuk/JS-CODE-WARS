@@ -1,32 +1,26 @@
 /*!SECTION
-Вам задано словник/хеш/об'єкт, що містить деякі мови та результати вашого тестування на цих мовах. Виведіть список мов, на яких ви набрали не менше 60 балів, у порядку спадання.
+У цьому завданні вам буде задано масив цілих чисел, елементи якого мають як від'ємне, так і додатне значення, за винятком одного числа, яке є або тільки від'ємним, або тільки додатним. Ваше завдання полягає у тому, щоб знайти це число.
 
-Зауваження: результати завжди будуть унікальними (тобто ніяких дублікатів)
+Examples:
 
-Examples
-{"Java": 10, "Ruby": 80, "Python": 65}    -->  ["Ruby", "Python"]
-{"Hindi": 60, "Dutch" : 93, "Greek": 71}  -->  ["Dutch", "Greek", "Hindi"]
-{"C++": 50, "ASM": 10, "Haskell": 20}     -->  []
+[1, -1, 2, -2, 3] => 3
+
+3 has no matching negative appearance
+
+[-3, 1, 2, 3, -1, -4, -2] => -4
+
+-4 has no matching positive appearance
+
+[1, -1, 2, -2, 3, 3] => 3
+
+(the only-positive or only-negative integer may appear more than once)
 
 */
 
 // v1
 
-function myLanguages(results) {
-	return Object.entries(results).sort((a, b) => b[1] - a[1]).map(([key, value]) => value >= 60 ? key : []).flat();
-}
+function solve(arr){
+	return arr.find(num => !arr.includes(-num))
+};
 
-console.log(myLanguages({ Java: 10, Ruby: 80, Python: 65 }))
-console.log(myLanguages({"Hindi": 60, "Dutch" : 93, "Greek": 71}))
-console.log(myLanguages({"C++": 50, "ASM": 10, "Haskell": 20}))
-
-// v2
-
-
-function myLanguages(results) {
-	return Object.keys(results).filter(key => results[key] >= 60).sort((a, b) => results[b] - results[a]);
-}
-
-console.log(myLanguages({ Java: 10, Ruby: 80, Python: 65 }))
-console.log(myLanguages({"Hindi": 60, "Dutch" : 93, "Greek": 71}))
-console.log(myLanguages({"C++": 50, "ASM": 10, "Haskell": 20}))
+console.log(solve([-3, 1, 2, 3, -1, -4, -2] ));
