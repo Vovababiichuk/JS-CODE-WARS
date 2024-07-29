@@ -34,3 +34,15 @@ books.sort((a, b) => a.title < b.title ? -1 : 1);
 // Output the sorted books
 console.log(books);
 
+//TODO - frequency item in array
+function mostFrequentItemCount(collection) {
+	const frequencyObj = collection.reduce((acc, curr) => {
+		acc[curr] = (acc[curr] || 0) + 1;
+		return acc;
+	}, {}) // {2: 2, 3: 4, 4: 1, 9: 1, -1: 5}
+
+	return Math.max(...Object.values(frequencyObj));
+}
+
+console.log(mostFrequentItemCount([3, -1, -1, -1, 2, 3, -1, 3, -1, 2, 4, 9, 3]));
+
