@@ -21,9 +21,18 @@ Even though there are no spaces, it is still valid because none are needed:
 
 // v1
 function validSpacing(s) {
-	return s.split(' ').every(word => word.trim().length > 0);
+	return s.startsWith(' ') || s.endsWith(' ') || s.includes('  ') ? false : true
 }
 console.log(validSpacing('Hello world'));
 console.log(validSpacing(' Hello world'));
 console.log(validSpacing('Helloworld'));
 console.log(validSpacing('Helloworld '));
+console.log(validSpacing('Hello  world '));
+
+// v2
+function validSpacing(s) {
+	return s.trim() == s && !s.includes("  ");
+}
+console.log(validSpacing('Hello world'));
+console.log(validSpacing(' Hello world'));
+console.log(validSpacing('Helloworld'));
