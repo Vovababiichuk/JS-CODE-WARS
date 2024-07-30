@@ -1,5 +1,4 @@
 /*!SECTION
-Задача
 За заданим масивом/списком [] цілих чисел знайти максимальну різницю між послідовними елементами у відсортованому вигляді.
 
 Примітки
@@ -42,5 +41,9 @@ maxGap ({-54,37,0,64,640,0,-15}) //return (576)
 
 // v1
 function maxGap (numbers){
-  //your code here
+  const arr = numbers.sort((a, b) => b - a).map((_, i, arr) => arr[i] - arr[i + 1]).slice(0, -1);
+
+  return Math.max(...arr);
 }
+
+console.log(maxGap([13,10,5,2,9]));
