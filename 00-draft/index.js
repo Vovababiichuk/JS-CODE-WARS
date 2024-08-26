@@ -1,6 +1,21 @@
 // TODO -  CHECK BY NUMBER
 //? return [...pin].every(char => char >= '0' && char <= '9')
 
+// TODO - convert to number
+map(Number)
+
+// TODO - FILTER LETTERS
+filter(letter => /[a-z]/.test(letter))
+// Цей рядок фільтрує масив, залишаючи тільки літери від ‘a’ до ‘z’. Це виключає всі інші символи, такі як пробіли, цифри та спеціальні символи.
+/*
+	const obj = [...city.toLowerCase()]
+    .filter(letter => /[a-z]/.test(letter))
+    .reduce((acc, letter) => {
+      acc[letter] = (acc[letter] || '') + '*';
+      return acc;
+    }, {})
+*/
+
 //TODO - CREATE A NEW ARRAY with numbers from 1 to n
 console.log(new Array(n).fill(0).map((_, i) => i + 1))
 
