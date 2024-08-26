@@ -7,3 +7,11 @@ range(5) --> 1,2,3,4,5
 range(3, 7) --> 3,4,5,6,7
 range(2, 3, 15) --> 2,5,8,11,14
 */
+
+const range = () => {
+
+}
+
+console.log(range(5));
+console.log(range(3, 7));
+console.log(range(2, 3, 15));
