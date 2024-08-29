@@ -42,3 +42,20 @@ console.log(
 console.log(
 	countFeelings('abcdkasdfvkadf', ['desire', 'joy', 'shame', 'longing', 'fear'])
 )
+
+
+//! CodeWars solution
+
+// function countFeelings(string, array) {
+//   let count = 0;
+
+//   array.forEach((item) => {
+//       if (item.split('').every((i) => {
+//           return string.includes(i);
+//       })) {
+//         count++;
+//       }
+//   });
+
+//   return count == 1 ? `${count} feeling.` : `${count} feelings.`;
+// }
