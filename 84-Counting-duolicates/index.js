@@ -19,7 +19,7 @@ Example
 // 4. output length
 
 function duplicateCount(text) {
-	return text.toLowerCase().split('').filter((char, index, arr) => arr.indexOf(char) !== index).length
+	return [...new Set(text.toLowerCase().split('').filter((char, index, arr) => arr.indexOf(char) !== index))].length
 }
 
 console.log(duplicateCount(''));
