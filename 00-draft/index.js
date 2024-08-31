@@ -1,3 +1,7 @@
+// TODO Check for Duplicates!!!!!!!!!!!!!
+
+filter((char, index, arr) => arr.indexOf(char) !== index)
+
 // TODO -  CHECK BY NUMBER
 //? return [...pin].every(char => char >= '0' && char <= '9')
 
