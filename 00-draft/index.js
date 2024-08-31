@@ -1,6 +1,10 @@
 // TODO Check for Duplicates!!!!!!!!!!!!!
-
 filter((char, index, arr) => arr.indexOf(char) !== index)
+
+// TODO - Compare next item
+filter((item, index) => item !== iterable[index + 1])
+// Фільтруємо повторювані сусідні елементи
+return iterable.filter((item, index) => item !== iterable[index - 1]);
 
 // TODO -  CHECK BY NUMBER
 //? return [...pin].every(char => char >= '0' && char <= '9')
